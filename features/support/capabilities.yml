@@ -1,0 +1,13 @@
+caps: 
+   "app": "./app-debug.apk"
+   "platformName": "android"
+   "deviceName": "Anonymous"
+   "appActivity": "com.example.vamsi.login.MainActivity"
+   "appWaitActivity": "com.example.vamsi.login.MainActivity"
+   "automationName": "UiAutomator2"
+   "avdArgs": "-no-window"
+   "newCommandTimeout": 3600
+   "autoGrantPermissions": true
+   "autoAcceptAlerts": true
+   "disableAndroidWatchers": true
+   "resetKeyboard": true
