@@ -20,7 +20,8 @@ class Utils
   end
 
   def allert
-      @driver.switch_to.alert.accept()
+    appium_driver.alert.accept
   end
+
 
 end

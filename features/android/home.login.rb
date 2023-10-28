@@ -6,17 +6,17 @@ class HomeLogin < Utils
     @login = 'btnLogin'
     @new_user = 'tvRegister'
     @login_success = 'AppCompatTextView'
+    @msg = 'LinearLayout'
   end
 
   def login_success
-    type_text(@email, 'Rafa_Teste@gmail.com', 5)
-    type_text(@password, 'R@123', 5)
+    type_text(@email, 'rafa@gmail.com', 5)
+    type_text(@password, '1234', 5)
     click_in_element(@login, 5)
   end
 
   def valid_login_success
-    wait_for_element(@login_success, 5)
-    expect(get_text(@login_success)).to eql "Registration Successful"
+    expect(get_text(@login_success)).to eql "You are now logged in"
   end
 
   def login_fail
@@ -26,7 +26,7 @@ class HomeLogin < Utils
   end
 
   def valid_login_fail
-    wait_for_element(@login_success, 5)
-    expect(get_text(@login_success)).to eql "Registration Successful"
+    wait_for_element(@msg, 5)
+    expect(get_text(@msg)).to eql "Login error"
   end
 end

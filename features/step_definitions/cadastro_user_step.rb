@@ -27,9 +27,11 @@ Dado('que estou na tela inicial de login com usuário inválido') do
 end
 
 Quando('informo os dados do user inválido') do
+  @login_fail = HomeLogin.new
   @login_fail.login_fail
 end
 
 Entao('não permite efetuado o login com sucesso') do
+  @login_fail = HomeLogin.new
   @login_fail.valid_login_fail
 end
